@@ -28,10 +28,10 @@
             <div class="thumbs">
                 <!-- Navigator -->
                 <nav class="navigator">
-                    <div @click="btnUp" class="prev">
+                    <div @click="btnUp" v-on:click="counter -= 1" class="prev">
                         <i class="fas fa-chevron-up"></i>
                     </div>
-                    <div @click="btnDown" class="next">
+                    <div @click="btnDown" v-on:click="counter += 1" class="next">
                         <i class="fas fa-chevron-down"></i>
                     </div>
                 </nav>

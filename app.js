@@ -34,10 +34,10 @@ const app = new Vue({
     },
     methods: {
         btnUp() {
-            console.log("ciaoo vado su")
+            console.log(this)
         },
         btnDown() {
-            console.log(slides[counter])
+            console.log(counter)
         }
     }
 })
