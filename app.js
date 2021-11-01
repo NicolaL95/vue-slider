@@ -33,13 +33,24 @@ const app = new Vue({
 
     },
     methods: {
+
         btnUp() {
-            console.log(this)
+            document.querySelectorAll(".thumb_image")[this.counter].classList.remove("activeThumb");
+            if (this.counter == 0) {
+                this.counter = 5;
+            }
+            this.counter -= 1;
+            document.querySelectorAll(".thumb_image")[this.counter].classList.add("activeThumb");
         },
         btnDown() {
-            console.log(counter)
+            document.querySelectorAll(".thumb_image")[this.counter].classList.remove("activeThumb");
+            if (this.counter == 4) {
+                this.counter = -1;
+            }
+            this.counter += 1;
+            document.querySelectorAll(".thumb_image")[this.counter].classList.add("activeThumb");
         }
     }
 })
 
-
+document.querySelector(".thumb_image").classList.add("activeThumb")
